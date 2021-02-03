@@ -1,0 +1,335 @@
+.Main{
+  background: url("./img/background.svg");
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      padding-top: 25px;
+      @include mq('tablet'){
+        padding-top: 100px;
+      }
+    }
+    &__content{
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      justify-content: left;
+      .content-title{
+        font-size: 35px;
+        color: $first-color;
+        font-weight: bold;
+        font-family: $font-family;
+        margin-bottom: 10px;
+        @include mq('tablet'){
+          font-size: 65px;
+        }
+      }
+      .content-parag{
+        color: #484848;
+        font-size: 18px;
+        font-family: $font-family;
+        font-weight: 400;
+        margin-bottom: 10px;
+        @include mq('tablet'){
+          font-size: 22px;
+        }
+      }
+    }
+  }
+.Content{
+  .container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+  }
+  &__parag{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: $font-family;
+    color: #424242;
+  }
+  &__top{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    @include mq('tablet'){
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .top__left{
+      color: $first-color;
+      font-size: 35px;
+      font-weight: 700;
+      font-family: $font-family;
+      margin-bottom: 10px;
+
+      @include mq('tablet'){
+        display: flex;
+        flex: 0 0 45%;
+      }
+    }
+    .top__right{
+      font-size: 20px;
+      font-weight: 500;
+      color: #424242;
+      font-family: $font-family;
+      text-align: left;
+
+      @include mq('tablet'){
+        flex: 0 0 50%;
+      }
+    }
+  }
+  &__bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 50px;
+    justify-content: start;
+
+    @include mq('tablet'){
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    .bottom__content{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      margin-bottom: 20px;
+
+      @include mq('tablet'){
+        display: flex;
+        flex-direction: column;
+
+        flex: 0 0 30%;
+       &:nth-child(2){
+         margin-top: 100px;
+       }
+        &:nth-child(1){
+          margin-top: -100px;
+        }
+        &:nth-child(3){
+          margin-top: -100px;
+        }
+      }
+
+      .c-top{
+
+        &__sifir{
+          font-size: 150px;
+          font-family: $font-family;
+          color: rgba($first-color,.2);
+          font-weight: normal;
+          text-align: center;
+        }
+        &__sifir__bir{
+          font-weight: 700;
+          color: #000;
+          font-size: 30px;
+          font-family: $font-family;
+          margin-left: -100px;
+        }
+      }
+      .c-mid{
+        font-size: 20px;
+        font-weight: 500;
+        font-family: $font-family;
+        color: #424242;
+        margin-bottom: 30px;
+      }
+      .c-bot{
+        display: none;
+
+        @include mq('tablet'){
+          display: block;
+          flex: 0 0 40%;
+        }
+        &-img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.Features{
+  background-color: #245852;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    @include mq('tablet'){
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    @include mq('tablet'){
+      flex: 0 0 45%;
+      align-items: start;
+      justify-content: start;
+    }
+
+    .left__title{
+      color: #fff;
+      font-family: $font-family;
+      font-size: 50px;
+      font-weight: 700;
+      margin-bottom: 33px;
+    }
+    .left__parag{
+      font-size: 25px;
+      font-weight: 600;
+      font-family: $font-family;
+      color: #fff;
+      margin-bottom: 57px;
+    }
+  }
+  &__right{
+   display: none;
+
+    @include mq('tablet'){
+      display: inline-flex;
+      flex: 0 0 50%;
+      .right__img{
+       height: 100%;
+        width: 100%;
+        max-width: 550px;
+        max-height: 550px;
+      }
+    }
+  }
+}
+.Products{
+  padding-top: 120px;
+  margin-bottom: 50px;
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    @include mq('tablet'){
+      flex-direction: row;
+    }
+  }
+
+  &__left{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    position: relative;
+    margin-bottom: 100px;
+    @include mq('tablet'){
+      margin-bottom: 20px;
+      margin-right: 90px;
+    }
+    .left__bakground{
+      width: 100%;
+      max-width: 450px;
+      background-color: rgba(1,153,102,.2);
+
+    }
+    .left__image{
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      width: 100%;
+    }
+    .left__card{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      max-width: 296px;
+      background-color: #fff;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      .card__title{
+        padding-top: 20px;
+        color: #000;
+        font-weight: 600;
+        font-family: $font-family;
+        margin-bottom: 7px;
+      }
+      figcaption{
+        font-size: 12px;
+        font-family: $font-family;
+        font-weight: 400;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .card__content{
+        font-size: 16px;
+        color: #000;
+        font-weight: 700;
+        font-family:$font-family;
+        margin-bottom: 15px;
+      }
+      .card__nav{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-left: 27%;
+        &-item{
+          font-size: 10px;
+          font-weight: 400;
+          color: #000;
+          margin-bottom: 15px;
+          list-style-type: disc;
+        }
+      }
+    }
+  }
+  &__right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    .right__title{
+      font-weight: 600;
+      font-size: 25px;
+      color: #424242;
+      font-family: $font-family;
+      margin-bottom: 10px;
+    }
+    .right__main-title{
+      color: $first-color;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: $font-family;
+      margin-bottom: 20px;
+    }
+    .right__parag{
+      font-size: 20px;
+      color: #484848;
+      font-weight: 400;
+      font-family: $font-family;
+      margin-bottom: 40px;
+    }
+  }
+}
